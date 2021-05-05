@@ -1,0 +1,163 @@
+body{
+	margin:0;
+	padding:0;
+	font-family: sans-serif;
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	padding-right: 8%;
+	padding-left: 8%;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.navbar{
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.logo {
+	width: 50px;
+	cursor: pointer;
+	margin: 30px 0;
+	display: inline;
+	animation: rote 4s infinite;
+}
+.menuicon {
+	width: 25px;
+	cursor: pointer;
+	animation: roted 6s infinite;
+}
+@keyframes roted {
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+nav {
+	flex: 1;
+	text-align: right;
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a {
+	text-decoration:none;
+	color: #000;
+	font-size:14px;
+}
+nav ul li a:hover {
+	color:#ff5ea2;
+}
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 100px 0;
+}
+.col-1 {
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 11%;
+    margin-top: -70%;
+}
+.col-1 h2 {
+	font-size: 54px;
+}
+.col-1 h3 {
+	font-size: 30px;
+	color:#707070;
+	font-weight: 100;
+	margin: 20px 0 10px;
+}
+.col-1 p {
+	font-size: 16px;
+	color: #b7b7b7;
+	font-weight: 100;
+}
+.col-1 h4{
+	margin: 30px 0;
+	font-size: 20px;
+}
+button{
+	width: 140px;
+	border:0;
+	padding: 12px 10px;
+	outline: none;
+	color:#fff;
+	background: linear-gradient(to right, #fb5283, #ff3527);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: width 0.5s;
+}
+
+button img{
+	width: 30px;
+	display:none;
+}
+button:hover img{
+	display: block;
+}
+button:hover {
+	width: 120px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.col-1::after{
+	content:"";
+	width:18px;
+	height:57%;
+	background: linear-gradient(#ff469f, #ff6062);
+	position: absolute;
+	left:-40px;
+	top: 40px;
+	animation: changecol 6s infinite;
+}
+@keyframes changecol {
+	0%{
+		background: linear-gradient(to right, #fb5283, #ff3527);
+	}
+	100%{
+		background: linear-gradient(to right, #ff3527, #fb5283);
+	}
+}
+.col-2 {
+	position: relative;
+	flex-basis: 60%;
+	display: flex;
+	align-items: center;
+}
+.col-2 .controller {
+    width: 80%;
+    margin-top: -130%;
+	transition:1s;
+}
+.col-2 .controller:hover{
+	transform: scale(1.1)
+}
+.color-box {
+    position: fixed;
+    right: 0;
+    top: 14%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    border-radius: 20px 0 0 20px;
+    height: 60%;
+    width: 42%;
+	transition:1s;
+    z-index: -1;
+    transform: translateX(154px);
+}
+
+
+
+
+
+
+
+
+
